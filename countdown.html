@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SERMEJ 26 - A faísca aguarda</title>
+  <link rel="stylesheet" href="countdown.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+
+  <div id="stars"></div>
+
+  <main class="wrap">
+
+    <a href="index.html" class="back-link">&larr; voltar à carta</a>
+
+    <!-- ESTADO: aguardando -->
+    <section id="waitingState" class="state">
+      <div class="ember" aria-hidden="true">
+        <div class="ember-core"></div>
+        <div class="ember-ring"></div>
+      </div>
+
+      <p class="eyebrow">Algo ainda está oculto</p>
+      <h1 class="title">A faísca ainda não foi acesa</h1>
+      <p class="lede">Um mapa espera para ser revelado. Volte quando o relógio chegar a zero.</p>
+
+      <div class="timer" id="timer" role="timer" aria-live="polite">
+        <div class="unit"><span class="num" id="dd">00</span><span class="label">dias</span></div>
+        <div class="sep">:</div>
+        <div class="unit"><span class="num" id="hh">00</span><span class="label">horas</span></div>
+        <div class="sep">:</div>
+        <div class="unit"><span class="num" id="mm">00</span><span class="label">min</span></div>
+        <div class="sep">:</div>
+        <div class="unit"><span class="num" id="ss">00</span><span class="label">seg</span></div>
+      </div>
+
+      <p class="target-date">06 de julho de 2026 &middot; 19h</p>
+    </section>
+
+    <!-- ESTADO: revelado -->
+    <!-- O conteúdo desta seção é montado via JavaScript somente quando o
+         cronômetro chega a zero. Propositalmente não fica escrito aqui no
+         HTML para não aparecer pronto ao inspecionar a página antes da hora. -->
+    <section id="revealState" class="state reveal hidden">
+      <div class="burst" aria-hidden="true">
+        <div class="burst-flame">
+          <svg viewBox="0 0 24 24"><path d="M12 2c1 3-2 4-2 7a3 3 0 006 0c1.5 1.5 2 3.3 2 5a6 6 0 11-12 0c0-3 2-5 3-7 1-1.5 1.5-3 3-5z"/></svg>
+        </div>
+      </div>
+      <div id="revealContent"></div>
+    </section>
+
+  </main>
+
+  <div class="waves" aria-hidden="true">
+    <svg viewBox="0 0 1440 200" preserveAspectRatio="none">
+      <path class="wave wave-back" d="M0,100 C240,160 480,40 720,100 C960,160 1200,40 1440,100 L1440,200 L0,200 Z"/>
+      <path class="wave wave-front" d="M0,120 C240,60 480,180 720,120 C960,60 1200,180 1440,120 L1440,200 L0,200 Z"/>
+    </svg>
+  </div>
+
+  <script src="countdown.js"></script>
+</body>
+</html>

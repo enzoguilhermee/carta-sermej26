@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SERMEJ 26 - A primeira faísca</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+
+  <!-- Céu de estrelas + fundo -->
+  <div id="stars"></div>
+
+  <!-- Fogos de artifício -->
+  <canvas id="fireworks" aria-hidden="true"></canvas>
+
+  <!-- Bandeirolas -->
+  <div class="bandeirolas" aria-hidden="true">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none" class="bandeirolas-svg">
+      <polygon points="0,0 40,0 20,50" class="bd bd-1"/>
+      <polygon points="60,0 100,0 80,50" class="bd bd-2"/>
+      <polygon points="120,0 160,0 140,50" class="bd bd-3"/>
+      <polygon points="180,0 220,0 200,50" class="bd bd-4"/>
+      <polygon points="240,0 280,0 260,50" class="bd bd-5"/>
+      <polygon points="300,0 340,0 320,50" class="bd bd-1"/>
+      <polygon points="360,0 400,0 380,50" class="bd bd-2"/>
+      <polygon points="420,0 460,0 440,50" class="bd bd-3"/>
+      <polygon points="480,0 520,0 500,50" class="bd bd-4"/>
+      <polygon points="540,0 580,0 560,50" class="bd bd-5"/>
+      <polygon points="600,0 640,0 620,50" class="bd bd-1"/>
+      <polygon points="660,0 700,0 680,50" class="bd bd-2"/>
+      <polygon points="720,0 760,0 740,50" class="bd bd-3"/>
+      <polygon points="780,0 820,0 800,50" class="bd bd-4"/>
+      <polygon points="840,0 880,0 860,50" class="bd bd-5"/>
+      <polygon points="900,0 940,0 920,50" class="bd bd-1"/>
+      <polygon points="960,0 1000,0 980,50" class="bd bd-2"/>
+      <polygon points="1020,0 1060,0 1040,50" class="bd bd-3"/>
+      <polygon points="1080,0 1120,0 1100,50" class="bd bd-4"/>
+      <polygon points="1140,0 1180,0 1160,50" class="bd bd-5"/>
+    </svg>
+  </div>
+
+  <main class="container">
+
+    <section class="sermej">
+      <p class="eyebrow">O convite continua</p>
+      <h1 class="logotype">SERMEJ<span>26</span></h1>
+      <p class="tagline">toda grande descoberta começa com uma primeira faísca</p>
+    </section>
+
+    <div class="envelope" id="carta" role="button" tabindex="0" aria-expanded="false" aria-label="Abrir carta do SERMEJ 26">
+      <div class="flap">
+        <span class="flame-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2c1 3-2 4-2 7a3 3 0 006 0c1.5 1.5 2 3.3 2 5a6 6 0 11-12 0c0-3 2-5 3-7 1-1.5 1.5-3 3-5z"/></svg>
+        </span>
+        Uma mensagem espera para ser acesa.<br>
+        <span class="flap-sub">Toque no envelope.</span>
+      </div>
+      <div class="paper">
+        <p class="mensagem">
+          Dizem que aqui, cada encontro acende algo invisível.<br><br>
+          Cada conversa cria caminhos que não estavam lá antes.<br>
+          E cada experiência deixa rastros que não se apagam.<br><br>
+          Mas nem toda chama é vista de imediato.<br>
+          Algumas só se revelam para quem decide procurá-las.<br>
+          Talvez a próxima conexão ainda esteja esperando por você.<br><br>
+          Nem toda resposta aparece no primeiro olhar.
+          Aguarde o momento certo para descobrir o que está escondido.
+        </p>
+
+        <div class="qr-wrap">
+          <div class="qr-glow" aria-hidden="true"></div>
+          <div id="qrcode" class="qrcode" title="Escaneie para descobrir o que está escondido"></div>
+          <p class="qr-caption">escaneie a faísca</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="msg-wrap magnet" id="msgWrap">
+      <span class="msg" id="typingText">A PRIMEIRA FAÍSCA ESTÁ POR VIR</span>
+      <span class="spark-dot" id="sparkDot" aria-hidden="true"></span>
+    </div>
+  </main>
+
+  <!-- Ondas -->
+  <div class="waves" aria-hidden="true">
+    <svg viewBox="0 0 1440 200" preserveAspectRatio="none">
+      <path class="wave wave-back" d="M0,100 C240,160 480,40 720,100 C960,160 1200,40 1440,100 L1440,200 L0,200 Z"/>
+      <path class="wave wave-front" d="M0,120 C240,60 480,180 720,120 C960,60 1200,180 1440,120 L1440,200 L0,200 Z"/>
+    </svg>
+  </div>
+
+  <!-- Lanterna que segue o cursor -->
+  <div class="flashlight" id="flashlight" aria-hidden="true"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
