@@ -1,5 +1,5 @@
 // Alvo: 6 de julho de 2026, 19h no horário de Brasília (UTC-3)
-const TARGET_DATE = new Date("2026-07-06T19:00:00-03:00").getTime();
+const TARGET_DATE = new Date("2026-07-06T18:30:00-03:00").getTime();
 
 const waitingState = document.getElementById("waitingState");
 const revealState = document.getElementById("revealState");
