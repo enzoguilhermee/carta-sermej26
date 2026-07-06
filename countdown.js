@@ -47,16 +47,12 @@ function buildRevealContent(){
   mapImg.loading = "eager";
   mapWrap.appendChild(mapImg);
 
-  const body = document.createElement("p");
-  body.className = "reveal-text";
-  const paragraphs = decode(REVEAL_DATA.body).split("\n\n");
-  paragraphs.forEach((para, i) => {
-    body.appendChild(document.createTextNode(para));
-    if(i < paragraphs.length - 1){
-      body.appendChild(document.createElement("br"));
-      body.appendChild(document.createElement("br"));
-    }
-  });
+  const body = document.createElement("a");
+  body.className = "reveal-cta";
+  body.href = "https://www.even3.com.br/sermej-26-755277/";
+  body.target = "_blank";
+  body.rel = "noopener noreferrer";
+  body.textContent = "Clique aqui e faça parte desse movimento";
 
   revealContent.appendChild(eyebrow);
   revealContent.appendChild(title);

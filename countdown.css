@@ -220,6 +220,25 @@ body{
   to{ opacity: 1; transform: scale(1); }
 }
 
+.reveal-cta{
+  display: inline-block;
+  margin-top: 4px;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, var(--gold), var(--orange));
+  color: var(--navy);
+  font-weight: 700;
+  font-size: .95rem;
+  text-decoration: none;
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(242,112,60,0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.reveal-cta:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(242,112,60,0.55);
+}
+
+
 /* ---------- Ondas ---------- */
 .waves{
   position: fixed;
